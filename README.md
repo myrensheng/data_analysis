@@ -4,7 +4,7 @@
 
 ![帅帅的Python](./sspython.png)
 
-有任何问题可以在**【公众号留言】**，我会在第一时间帮你解决。
+有任何问题可以在 **【公众号留言】** ，我会在第一时间帮你解决。
 
 ## 项目介绍
 
@@ -28,13 +28,10 @@ pip install pyecharts
 
 ## 下载研究
 
-**方法一：**
+- 进入 [项目下载地址](https://gitee.com/myrensheng/data_analysis)，点击下载，选择下载zip即可。
 
-进入 [项目下载地址](https://gitee.com/myrensheng/data_analysis)，点击下载，选择下载zip即可。
+- 使用git命令下载
 
-**方法二：**
-
-使用git命令下载
 
 ```shell
 git clone https://gitee.com/myrensheng/data_analysis
@@ -42,9 +39,11 @@ git clone https://gitee.com/myrensheng/data_analysis
 
 **建议：**
 
-- **强烈建议使用 anaconda3 运行该项目  **[软件下载地址](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
+- **强烈建议使用 anaconda3 运行该项目  ** [软件下载地址](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
+
 - **项目下载放到 jupyter 运行的目录下，默认位置：C:\Users\admin**
-- 
+
+  
 
 ## 案例数据
 
@@ -60,9 +59,9 @@ git clone https://gitee.com/myrensheng/data_analysis
 
 有任何问题可以在**公众号《帅帅的Python》留言**，我会在第一时间帮你解决
 
-- pyecharts未安装？
+- **pyecharts未安装？**
 
-  打开anaconda powershell prompt 或者 anaconda prompt，运行下面命令安装 pyecharts 即可。
+  打开**anaconda powershell prompt** 或者 **anaconda prompt**，运行下面命令安装 pyecharts 即可。
 
 ```shell
 pip install pyecharts
