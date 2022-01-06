@@ -10,7 +10,7 @@
 
 **关注微信公众号《帅帅的Python》，后台回复《数据分析》获取数据及源码**
 
-![帅帅的Python](../sspython.png)
+![帅帅的Python](../images/sspython.png)
 
 ### 项目背景
 
