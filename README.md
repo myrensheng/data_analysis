@@ -31,7 +31,7 @@
 | :----------------------------------------------------------: | :------------------------------------------------: | :------: | :--: |
 | [第一章](https://gitee.com/myrensheng/data_analysis/tree/master/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%94%A8Python%E7%BB%98%E5%88%B6%E6%9F%B1%E7%8A%B6%E5%9B%BE%E5%AF%B9%E6%AF%94%E5%95%86%E5%93%81%E9%94%80%E5%94%AE%E9%A2%9D%E7%9A%84%E5%B7%AE%E5%BC%82) |       用Python绘制柱状图对比商品销售额的差异       |    ⭐︎⭐︎    |      |
 | [第二章](https://gitee.com/myrensheng/data_analysis/tree/master/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%94%A8Python%E5%AF%B9%E4%B8%8D%E5%90%8C%E5%95%86%E5%93%81%E7%9A%84%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90) |      用Python对不同商品的销售数据进行预测分析      |    ⭐︎⭐︎    |      |
-| [第三章](https://gitee.com/myrensheng/data_analysis/tree/master/%E7%AC%AC%E4%B8%89%E7%AB%A0%E7%94%A8python%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E3%80%81%E5%AE%9E%E7%94%A8%E7%9A%84%E7%94%A8%E6%88%B7%E5%88%86%E5%B1%82%E6%A8%A1%E5%9E%8B%E2%80%94%E2%80%94RFM%E6%A8%A1%E5%9E%8B) |   用python实现简单、实用的用户分层模型——RFM模型    |   ⭐︎⭐︎⭐︎    |      |
+| [第三章](https://gitee.com/myrensheng/data_analysis/tree/master/%E7%AC%AC%E4%B8%89%E7%AB%A0%E7%94%A8python%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E5%AE%9E%E7%94%A8%E7%9A%84RFM%E7%94%A8%E6%88%B7%E5%88%86%E5%B1%82%E6%A8%A1%E5%9E%8B) |   用python实现简单、实用的用户分层模型——RFM模型    |   ⭐︎⭐︎⭐︎    |      |
 |                            第四章                            | <font color='red'>🧧🧧🧧**可以加快更新......**</font> |          |      |
 
 ## 学习交流📚︎

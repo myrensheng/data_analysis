@@ -1,9 +1,10 @@
-## 第三章：用python实现简单、实用的用户分层模型——RFM模型
+## 第三章：用python实现常用的用户分层模型（RFM模型）
 
 本文可以学习到以下内容：
 >1. RFM 模型的原理及代码实现
 >2. 使用 pandas 中的 read_sql 读取 sqlite 中的数据
->3. 使用 map 方法计算距离用户上次消费所过去的天数
+>2. 使用 dropna 删除含有缺失数据的行
+>3. 使用 to_datetime、map 方法计算距离用户上次消费所过去的天数
 >4. 使用 groupby+agg 方法统计消费频次、消费总金额
 >5. 使用 merge 方法合并 datafram 数据
 >6. 使用 quantile 方法计算用户消费数据的分位数
@@ -17,7 +18,19 @@
 
 ## 项目背景
 
+运营部的同学需要对客户进行分类管理，需要数据部门提供一个方案进行参考。
 
+小凡提出用**RFM模型**可以快速方便的将用户进行区分，模型的含义：
+
+> Recent：用户最近一次购买商品距今的时长
+>
+> Frequency：用户在一段时间购买商品的次数
+>
+> Mount：用户在一段时间内消费的金额
+
+将这三个维度的数据划分不同的区间，每个区间对应相应的分数，最后根据总分将用户划分不同的标签，方便管理。
+
+众人听后，一致通过该方案，并任命小凡为该项目的负责人。
 
 ## 读取数据
 
@@ -64,7 +77,7 @@ df.info()
 
 ![](./图片/2.png)
 
-数据有空值，需要删除
+可以看到create_time数据量为76048，amount的数据量为76043，说明数据中存在缺失，而且缺失数据占比不大，所以，使用 dropna 方法将含有缺失的数据删除。
 
 ```python
 # create_time和amount有缺失值，去掉缺失值
@@ -84,13 +97,15 @@ len(df2.user_id.unique())
 # 55540
 ```
 
-
+删除后的数据有76041条，有55540名客户。
 
 ## 数据分析
 
 ### 分析 Recent
 
-> 最近一次消费数据
+> 数据中的 create_time 为订单创建时间，可以用 to_datetime 方法计算出时间差
+>
+> 同一个用户又有多次购买记录，用 groupby 和 agg 的方法统计出最小的时间差
 
 
 ```python
@@ -108,7 +123,7 @@ recent_df = df2.groupby(by="user_id",as_index=False).agg({"recent":"min"})
 
 ### 分析 Frequency
 
-> 一段时间内的消费次数
+> 根据 user_id 将用户分组，对 order_id 计数计算出用户的购买频率
 
 
 ```python
@@ -120,7 +135,7 @@ frequency_df.sort_values(by="order_id",ascending=False).head()
 
 ### 分析 Mount
 
-> 一段时间内的消费总金额
+> 根据 user_id 将用户分组，对 amount 求和计算出用户的消费金额
 
 
 ```python
@@ -131,6 +146,8 @@ mount_df.sort_values(by="amount",ascending=False).head()
 ![](./图片/6.png)
 
 ## RFM模型
+
+> 将分析完成的数据根据 user_id 合并到一起方便分析
 
 
 ```python
@@ -146,9 +163,11 @@ rfm_df2.head()
 
 ![](./图片/7.png)
 
-### 根据分位数分层
+### 分位数分层
 
-
+> np.linespace 获取（0,1）之间的等分点
+>
+> quantile 根据划分好的等分点，计算出对应的原始数据
 
 
 ```python
@@ -172,10 +191,7 @@ rfm_df2.head()
 
 ### 自定义分层
 
-
-```python
-
-```
+> 客户的购买频率集中在1次，使用分位数效果不佳，用自定义的区间来划分
 
 
 ```python
@@ -194,7 +210,13 @@ rfm_df2.sample(5)
 
 ![](./图片/9.png)
 
-### 打标签
+### 定义客户标签
+
+> 定义一个总分 RFM，其中各权益的占比为 R:F:M=3:2:2
+>
+> 使用 cut 客户划分为 5 个不同的等级
+>
+> 使用 value_counts 统计各标签的数量
 
 
 ```python
@@ -221,6 +243,8 @@ rfm_df2["客户标签"].value_counts()
 
 ## 数据可视化
 
+> 用 pyecharts 可视化绘制饼图
+
 
 ```python
 from pyecharts import options as opts
@@ -246,7 +270,9 @@ c.render_notebook()
 ```
 ![](./图片/11.png)
 
-```python
-rfm_df2.groupby(by="客户标签",as_index=False).agg({"amount":"sum"})
-```
+## 结论
+
+RFM模型不需要任何算法的支撑，除python外，excel、sql等工具都可以实现。核心思想就是将三个指标划分出不同的区间，根据区间的不同获取相应的权重。
+
+小凡完成该模型后，将输出的结果保存为 Excel 发给运营部，为业务人员对客户采用不同的营销方式提供了参考。
 
