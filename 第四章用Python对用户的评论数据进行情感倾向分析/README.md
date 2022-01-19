@@ -3,7 +3,7 @@
 本文可以学习到以下内容：
 
 >1. 使用 pandas 中的 read_sql 读取 sqlite 中的数据
->2. 使用飞浆模型 senta_bilstm 对评论数据进行情感划分
+>2. 使用飞浆模型 senta_bilstm 对评论数据进行情感分析
 >3. 使用飞浆模型 lac 对评论数据进行分词
 >4. 使用 groupby+agg 方法统计评论主题中消极和积极用户分布
 >5. 使用 value_counts 方法统计整体评论分布情况
@@ -11,11 +11,21 @@
 
 **关注微信公众号《帅帅的Python》，后台回复《数据分析》获取数据及源码**
 
-![帅帅的Python](C:/Users/admin/data_analysis/images/sspython.png)
+![帅帅的Python](../images/sspython.png)
 
 ## 项目背景
 
-小凡，
+小凡，用户对耳机商品的评论信息，你有没有什么好的办法分析一下？经理来向小凡请教问题。
+
+嗯，小凡想了一会儿......
+
+我想到了两种分析方法：
+
+> 1、用模型判断用户评论信息的情感态度，分析消极和积极的占比
+>
+> 2、用分词模型对评论内容进行切分，分析客户关注的重点
+
+经理听完，甚是欣慰，便让小凡着手分析用户的评论数据。
 
 ### 获取数据
 
@@ -72,7 +82,7 @@ df.sample(5)
 
 ### 情感倾向
 
-用百度飞浆（paddlepaddle）模型库中的情感分析模型，将评论数据（content）转化为情感类别【积极1，消极0】
+小凡使用百度飞浆（paddlepaddle）模型库中的情感分析模型，将评论数据（content）转化为情感类别【积极1，消极0】
 
 #### senta_bilstm 模型
 
@@ -146,7 +156,7 @@ df2.info()
 
 ![](./图片/4.png)
 
-大约 60% 的用户给出好评
+可以看到，大约 60% 的用户给出好评
 
 #### 评论分布
 
@@ -236,10 +246,7 @@ for w in result_word_list:
         word_cloud_dict[w] = word_cloud_dict[w]+1
     else:
         word_cloud_dict[w] = 1
-```
 
-
-```python
 # 制作词云图的数据
 word_cloud_data = sorted(word_cloud_dict.items(),key=lambda x:x[1],reverse=True)
 ```
@@ -268,4 +275,11 @@ word_cloud.render_notebook()
 ![](./图片/8.png)
 
 ### 结论
+
+分析结束后，小凡总结出以下结论：
+
+1. 目前耳机用户的好评在60%左右
+2. 客户反映最多的耳机配置、音质问题
+
+小凡将结论汇报给经理，和经理一起想出一个可行的方案解决目前存在的问题。
 
