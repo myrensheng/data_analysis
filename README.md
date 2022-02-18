@@ -64,6 +64,7 @@ git pull
 |        users        |        用户信息数据        |
 |       comment       |  用户对耳机产品的评论数据  |
 |      bussiness      |     用户的交易记录数据     |
+|     shopRefuse      |        商品退单数据        |
 
 ## 常见问题🙋‍♀️
 
