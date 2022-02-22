@@ -36,7 +36,8 @@
 | [第二章](https://gitee.com/myrensheng/data_analysis/tree/master/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%94%A8Python%E5%AF%B9%E4%B8%8D%E5%90%8C%E5%95%86%E5%93%81%E7%9A%84%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90) |         用Python对不同商品的销售数据进行预测分析          |    ⭐︎⭐︎    |      |
 | [第三章](https://gitee.com/myrensheng/data_analysis/tree/master/%E7%AC%AC%E4%B8%89%E7%AB%A0%E7%94%A8python%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E5%AE%9E%E7%94%A8%E7%9A%84RFM%E7%94%A8%E6%88%B7%E5%88%86%E5%B1%82%E6%A8%A1%E5%9E%8B) |      用python实现简单、实用的用户分层模型（RFM模型）      |   ⭐︎⭐︎⭐︎    |      |
 | [第四章](https://gitee.com/myrensheng/data_analysis/tree/master/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E7%94%A8Python%E5%AF%B9%E7%94%A8%E6%88%B7%E7%9A%84%E8%AF%84%E8%AE%BA%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E6%83%85%E6%84%9F%E5%80%BE%E5%90%91%E5%88%86%E6%9E%90) |         用Python对用户的评论数据进行情感倾向分析          |   ⭐︎⭐︎⭐︎    |      |
-|                            第五章                            | <font color='red'>**还差99.99%就可以更完啦......**</font> |          |      |
+| [第五章](https://gitee.com/myrensheng/data_analysis/tree/master/%E7%AC%AC%E4%BA%94%E7%AB%A0%E7%94%A8Python%E5%88%86%E6%9E%90%E5%95%86%E5%93%81%E9%80%80%E5%8D%95%E6%95%B0%E6%8D%AE%E5%B9%B6%E6%89%BE%E5%87%BA%E5%BC%82%E5%B8%B8%E5%95%86%E5%93%81) |          用Python分析商品退单数据并找出异常商品           |    ⭐︎⭐︎    |      |
+|                            第六章                            | <font color='red'>**还差99.99%就可以更完啦......**</font> |          |      |
 
 ## 学习交流📚︎
 
